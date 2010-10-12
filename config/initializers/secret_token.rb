@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Interactivehomedevicecontroller::Application.config.secret_token = '7c192b1ea83afb2db3f745ea18fd5cbbeb71c5e90ae31e59258aad0ccaf6bf855d22e7ade44860edd0f03a3d0880105679b4decec9a86ead500210a96bf33a3c'
+Interactivehomedevicecontroller::Application.config.secret_token = 'c14515af6e117f7c43770a8184642c7f9519eec21caf85b2e1e3b86c98bb2569c25cb7a9d14c39220d9f353151c4839f913a30fddd7318af29240977a99ed188'
