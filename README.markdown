@@ -1,4 +1,4 @@
-.h1 Funktion
+# Funktion
 
 * Geräte defineren und Eigenschaften definieren
 * zb. Fernseh erfassen mit Ein- und Ausschalt-Eigenschaft
