@@ -1,0 +1,12 @@
+%h2= "device \"#{@device.to_param}\""
+- content_tag_for :div, @device do
+  %ul
+    %li
+      %strong Name:
+      =h @device.name
+    %li
+      %strong Location:
+      =h @device.location
+%ul
+  %li= link_to 'Edit', edit_device_path(@device)
+  %li= link_to 'Back', devices_path

@@ -1,0 +1,8 @@
+%h2 Listing devices
+- if !@devices.empty?
+  .devices
+    = render :partial => "device", :collection => @devices
+  = will_paginate @devices
+- else
+  %p There are no devices to show yet.
+= link_to 'New device', new_device_url

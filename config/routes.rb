@@ -1,4 +1,6 @@
 Interactivehomedevicecontroller::Application.routes.draw do
+  resources :devices
+  root :to => 'devices#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

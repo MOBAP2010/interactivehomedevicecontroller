@@ -1,0 +1,5 @@
+%h2 New device
+= semantic_form_for @device do |form|
+  = render :partial => 'form', :locals => {:form => form}
+%ul
+  %li= link_to 'Back', devices_path

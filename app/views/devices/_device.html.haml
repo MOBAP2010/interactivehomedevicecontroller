@@ -1,0 +1,11 @@
+- content_tag_for :div, device do
+  %ul
+    %li
+      %strong Name:
+      =h device.name
+    %li
+      %strong Location:
+      =h device.location
+    = link_to 'Show', device
+    = link_to 'Edit', edit_device_path(device)
+    = link_to 'Destroy', device, :confirm => 'Are you sure?', :method => :delete
