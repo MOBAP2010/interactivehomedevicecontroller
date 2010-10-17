@@ -8,6 +8,12 @@
     %li
       %strong Location:
       =h @device.location
+    %li
+      %strong Options:
+      %ol
+        - @device.options.each do |option|
+          = render :partial => 'options/option', :locals => {:option => option}
+
 %ul.device-actions
   %li= link_to 'Edit', edit_device_path(@device)
   %li= link_to 'Back', devices_path

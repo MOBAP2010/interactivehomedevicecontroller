@@ -1,4 +1,10 @@
 = form.inputs do
   = form.input :name, :label => 'Name'
   = form.input :location, :label => 'Location'
+  %ul#options
+    %li Options:
+    = form.semantic_fields_for :options do |option|
+      = render :partial => 'options/form', :locals => {:form => option}
+    %li
+      = link_to 'test', new_device_option_path(@device), :remote => true
 = form.buttons :commit

@@ -1,0 +1,1 @@
+page['#options'].append(render(:partial => 'options/new', :locals => {:form => @device.options.new}))

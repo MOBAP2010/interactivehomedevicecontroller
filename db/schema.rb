@@ -10,11 +10,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101012175009) do
+ActiveRecord::Schema.define(:version => 20101017133032) do
+
+  create_table "boolean_settings", :force => true do |t|
+    t.string   "name"
+    t.boolean  "setting"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "devices", :force => true do |t|
     t.string   "name"
     t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "options", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "device_id"
+  end
+
+  create_table "settings", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
