@@ -1,6 +1,8 @@
 %h2 Editing device
 = semantic_form_for @device do |form|
   = render :partial => "form", :locals => {:form => form}
+
+= link_to 'test', new_device_option_path(@device), :remote => true
 %ul.device-actions
   %li= link_to 'Show', @device
   %li= link_to 'Back', devices_path

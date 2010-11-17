@@ -9,6 +9,9 @@
       %strong Location:
       =h @device.location
     %li
+      %strong Type
+      - puts @device.type
+    %li
       %strong Options:
       %ol
         - @device.options.each do |option|

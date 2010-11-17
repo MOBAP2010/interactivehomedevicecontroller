@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101017133032) do
+ActiveRecord::Schema.define(:version => 20101116184745) do
 
   create_table "boolean_settings", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20101017133032) do
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "power"
+    t.integer  "type_id"
   end
 
   create_table "options", :force => true do |t|
@@ -34,6 +36,12 @@ ActiveRecord::Schema.define(:version => 20101017133032) do
   end
 
   create_table "settings", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "types", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
