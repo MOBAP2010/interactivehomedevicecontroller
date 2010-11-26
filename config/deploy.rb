@@ -29,10 +29,10 @@ namespace :deploy do
   end
 end
 
-set :default_environment, {
-  'PATH' => "/usr/local/rvm/gems/ruby-1.9.2-p0@rails3:/usr/local/rvm/rubies/ruby-1.9.2-p0/bin:$PATH",
-  'RUBY_VERSION' => 'ruby 1.9.2',
-  'GEM_HOME'     => '/usr/local/rvm/gems/ruby-1.9.2-p0',
-  'GEM_PATH'     => '/usr/local/rvm/gems/ruby-1.9.2-p0@rails3',
-  'BUNDLE_PATH'  => '/usr/local/rvm/gems/ruby-1.9.2-p0/bin/bundle'
-}
+#set :default_environment, {
+#  'PATH' => "/usr/local/rvm/gems/ruby-1.9.2-p0@rails3:/usr/local/rvm/rubies/ruby-1.9.2-p0/bin:$PATH",
+#  'RUBY_VERSION' => 'ruby 1.9.2',
+#  'GEM_HOME'     => '/usr/local/rvm/gems/ruby-1.9.2-p0',
+#  'GEM_PATH'     => '/usr/local/rvm/gems/ruby-1.9.2-p0@rails3',
+#  'BUNDLE_PATH'  => '/usr/local/rvm/gems/ruby-1.9.2-p0/bin/bundle'
+#}
