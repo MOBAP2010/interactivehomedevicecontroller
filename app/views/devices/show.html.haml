@@ -9,13 +9,11 @@
       %strong Location:
       =h @device.location
     %li
-      %strong Type
-      - puts @device.type
+      %strong DeviceType
+      =h @device.device_type
     %li
-      %strong Options:
-      %ol
-        - @device.options.each do |option|
-          = render :partial => 'options/option', :locals => {:option => option}
+      %strong Power:
+      =h power_switch @device.power
 
 %ul.device-actions
   %li= link_to 'Edit', edit_device_path(@device)

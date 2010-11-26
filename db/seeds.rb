@@ -7,4 +7,4 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
-types = Type.create([{:name => 'Beleuchtung'}, {:name => 'Lüftung'}, {:name => 'Multimedia'}, {:name => 'Infrastruktur'}, {:name => 'Unbekannt'}])
+#types = DeviceType.create([{:name => 'Beleuchtung'}, {:name => 'Lüftung'}, {:name => 'Multimedia'}, {:name => 'Infrastruktur'}, {:name => 'Unbekannt'}])

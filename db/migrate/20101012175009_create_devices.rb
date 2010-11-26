@@ -3,6 +3,8 @@ class CreateDevices < ActiveRecord::Migration
     create_table :devices do |t|
       t.string :name
       t.string :location
+      t.string :device_type
+      t.boolean :power, :default => true
 
       t.timestamps
     end

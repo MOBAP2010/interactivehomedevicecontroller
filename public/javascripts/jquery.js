@@ -5646,7 +5646,7 @@ jQuery.extend({
 		try {
 			// Set content-type if data specified and content-body is valid for this type
 			if ( (s.data != null && !noContent) || (origSettings && origSettings.contentType) ) {
-				xhr.setRequestHeader("Content-Type", s.contentType);
+				xhr.setRequestHeader("Content-DeviceType", s.contentType);
 			}
 
 			// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
