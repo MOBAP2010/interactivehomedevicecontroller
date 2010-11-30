@@ -2,7 +2,7 @@
 - if !@devices.empty?
   .devices
     = render :partial => "device", :collection => @devices
-  = will_paginate @devices
+  =# will_paginate @devices
 - else
   %p There are no devices to show yet.
 %ul.device-actions

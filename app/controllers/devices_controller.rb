@@ -3,7 +3,7 @@ class DevicesController < ApplicationController
   actions :index, :show, :new, :create, :edit, :destroy, :update
 
   def index
-    @devices = Device.paginate :page => params[:page], :per_page => 5, :order => 'created_at DESC'
+    @devices = Device.all #paginate :page => params[:page], :per_page => 5, :order => 'created_at DESC' 
 
     index!
   end

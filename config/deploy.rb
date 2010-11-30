@@ -1,4 +1,6 @@
-require 'bundler/capistrano'
+#require 'capistrano_recipes'
+
+set :server, :passenger
 
 ssh_options[:forward_agent] = true
 set :repository, "git@github.com:MOBAP2010/interactivehomedevicecontroller.git"  # Your clone URL
