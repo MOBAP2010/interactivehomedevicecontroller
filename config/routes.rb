@@ -1,5 +1,6 @@
 Interactivehomedevicecontroller::Application.routes.draw do
   resources :devices do
+    get 'power'
     resources :options
   end
 

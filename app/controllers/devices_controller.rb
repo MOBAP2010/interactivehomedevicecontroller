@@ -7,4 +7,11 @@ class DevicesController < ApplicationController
 
     index!
   end
+
+  def power
+    @device = Device.find(params[:device_id])
+    @device.power = (@device.power ? false : true)
+    @device.save!
+    render :show
+  end
 end
