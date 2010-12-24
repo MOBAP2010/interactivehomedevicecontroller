@@ -10,5 +10,8 @@
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
   %body{:id => controller_name}
     #container
-      = yield
+      #qr-code
+        = image_tag 'rest_access_apk.png'
+      #content
+        = yield
     = javascript_include_tag :defaults
