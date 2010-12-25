@@ -8,8 +8,9 @@ set :scm, "git"
 set :branch, "master"
 set :user, "raskhadafi"  # The server's user for deploys
 set :deploy_via, :remote_cache
-set :deploy_to, '/srv/good2go.ch/mobap/'
+set :deploy_to, '/srv/good2go.ch/android/'
 set :git_enable_submodules, 1
+set :copy_exclude, [".git", "spec"]
 
 set :application, "interactivehomedevicecontroller"
 set :use_sudo, false
@@ -19,10 +20,10 @@ set :rvm_type, :system
 
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "mobap.good2go.ch"                          # Your HTTP server, Apache/etc
-role :app, "mobap.good2go.ch"                          # This may be the same as your `Web` server
+role :web, "android.good2go.ch"                          # Your HTTP server, Apache/etc
+role :app, "android.good2go.ch"                          # This may be the same as your `Web` server
 #role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "mobap.good2go.ch", :primary => true 
+role :db,  "android.good2go.ch", :primary => true 
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
@@ -39,6 +40,17 @@ namespace :deploy do
   end
 end
 
+desc "Change group to www-data"
+task :chown_to_www_data, :roles => [ :app, :db, :web ] do
+        sudo "chown -R #{user}:www-data #{deploy_to}"
+end 
+
+desc "Fix file permissions"
+task :fix_file_permissions, :roles => [ :app, :db, :web ] do
+        sudo "chmod -R g+rw #{current_path}/tmp"
+        sudo "chmod -R g+rw #{current_path}/log"
+        sudo "chmod -R g+rw #{current_path}/public/system"
+end 
 #set :default_environment, {
 #  'PATH' => "/usr/local/rvm/gems/ruby-1.9.2-p0@rails3:/usr/local/rvm/rubies/ruby-1.9.2-p0/bin:$PATH",
 #  'RUBY_VERSION' => 'ruby 1.9.2',
