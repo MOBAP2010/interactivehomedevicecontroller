@@ -37,5 +37,7 @@ group :development, :test do
   gem 'jquery-rails'
   gem 'capistrano'
   gem 'rvm'
+  gem 'capistrano'
+  gem 'capistrano_colors'
   gem 'capistrano-recipes'
 end
