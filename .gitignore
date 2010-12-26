@@ -6,3 +6,4 @@ tmp/**/*
 *.swp
 .idea/*
 db/*.sqlite
+config/database.yml
