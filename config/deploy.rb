@@ -1,4 +1,5 @@
-#require 'capistrano_recipes'
+require 'capistrano_colors'
+require 'cap_recipes/tasks/rails'
 
 set :server, :passenger
 
@@ -12,7 +13,7 @@ set :deploy_to, '/srv/good2go.ch/android/'
 set :git_enable_submodules, 1
 set :copy_exclude, [".git", "spec"]
 
-set :application, "interactivehomedevicecontroller"
+set :application, "android"
 set :use_sudo, false
 
 #set :rvm_ruby_string, "1.9.2@rails3"
@@ -31,6 +32,7 @@ role :db,  "good2go", :primary => true
 
 require "bundler/capistrano"
 after "bundle:install", "deploy:migrate"
+after "deploy:update_code", "rails:symlink_db_config"
 
 namespace :deploy do
   task :start do ; end

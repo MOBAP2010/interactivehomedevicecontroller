@@ -39,5 +39,5 @@ group :development, :test do
   gem 'rvm'
   gem 'capistrano'
   gem 'capistrano_colors'
-  gem 'capistrano-recipes'
+  gem 'cap-recipes'
 end
