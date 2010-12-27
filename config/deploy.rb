@@ -1,5 +1,4 @@
 require 'capistrano_colors'
-require 'cap_recipes/tasks/rails'
 
 set :server, :passenger
 
@@ -32,7 +31,6 @@ role :db,  "good2go", :primary => true
 
 require "bundler/capistrano"
 after "bundle:install", "deploy:migrate"
-after "deploy:update_code", "rails:symlink_db_config"
 
 namespace :deploy do
   task :start do ; end

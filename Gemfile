@@ -10,7 +10,9 @@ gem 'will_paginate', "~>3.0.pre2"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+group :production do
+  gem 'mysql'
+end
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Use unicorn as the web server
