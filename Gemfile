@@ -37,9 +37,8 @@ gem 'memcache'
 # and rake tasks are available in development mode:
 group :development, :test do
   gem 'jquery-rails'
-  gem 'capistrano'
   gem 'rvm'
   gem 'capistrano'
-  gem 'capistrano_colors'
+  #gem 'capistrano_colors'
   gem 'cap-recipes'
 end
